@@ -1,0 +1,14 @@
+#activation du moteur de reecriture
+RewriteEngine on
+
+
+# reddirection de toute les requetes vers le fichier index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(image|style)/(.*)$ index.php [L]
+
+#permetre lacces aux fichiers des dossiers style  et image tout en bloquant l'acces direct au dossiers style et image ainsi que leurs sous dossiers
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(image|style)/(.*)$ - [L]
+
+
+RewriteRule ^(.*)$ index.php [L]
