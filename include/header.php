@@ -1,8 +1,10 @@
 <?php
 
 require_once "constant.php";
-include "../controller/db.php";
-
+    include ("../controller/db.php");
+$req2= "SELECT * FROM users";
+$resp1=mysqli_query($conn,$req2);
+print_r($_SERVER);
 
 ?>
 

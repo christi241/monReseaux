@@ -4,13 +4,10 @@ $descriptionPage= "description de la page d'acceuile";
 require_once "./include/header.php";
 
 
-
 ?>
-
     <main class="home-main container">
         <h1 class="p-5 rounded shadow-lg my-5 bg-info">mon site web</h1>
-        
-    <div class="container-fluid gedf-wrapper">
+        <div class="container-fluid gedf-wrapper">
         <div class="row">
             <div class="col-md-3">
                 <div class="card">
@@ -28,7 +25,10 @@ require_once "./include/header.php";
 
             <!-- tous sur le code php pour l'ajout des post -->
 
-                
+                <!--- \\\\\\\Post-->
+               <?php  if ($_SESSION["utilisateur"]) {
+                # code...
+               ?>
                 <div class="card gedf-card">
                 <div class="card-body">
                     <h1 class="text-center">faite des poste </h1>
@@ -53,11 +53,12 @@ require_once "./include/header.php";
                     </div>
                     
                 </div>
-         
+                <?php }?>
                 <!-- Post /////-->
 
 
-               
+            
+                <!-- ITEM -->
                 <form  method="post" action="#" enctype="multipart/form-data">
                 <div class="card my-3">
                             <div class="card-header bg-white border-0 py-2">
@@ -110,7 +111,7 @@ require_once "./include/header.php";
                             </div>
                         </div>
                         </form>
-                       
+                        
 
                 <!--- \\\\\\\Post-->
                 <form  method="post" action="#" enctype="multipart/form-data">
@@ -166,7 +167,7 @@ require_once "./include/header.php";
                     </div>
                 </div>
                 </form>
-               
+                
                 <!-- Post /////-->
             </div>
 
